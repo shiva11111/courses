@@ -1,0 +1,33 @@
+.features {
+  display: grid;
+  grid-template-areas: "one two three";
+  grid-template-columns: "1fr 1fr 1fr";
+
+  padding: 1rem;
+  justify-items: center;
+  color: white;
+  background-image: linear-gradient(to right bottom, $primary-color);
+  &-one {
+    grid-area: one;
+  }
+  &-two {
+    grid-area: two;
+  }
+  &-three {
+    grid-area: three;
+  }
+
+  &-heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  &-caption {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .features {
+    display: none;
+  }
+}

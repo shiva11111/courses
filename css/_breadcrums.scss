@@ -1,0 +1,17 @@
+.breadcrums {
+  padding: 1.3rem;
+  font-size: 1rem;
+  color: #534888;
+  font-weight: bolder;
+  &-inner {
+    margin-left: 7rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .breadcrums {
+    &-inner {
+      margin-left: 0;
+    }
+  }
+}

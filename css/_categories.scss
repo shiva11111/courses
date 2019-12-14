@@ -1,0 +1,128 @@
+.top-categories {
+  display: grid;
+  grid-template-areas:
+    "one two three four"
+    "five six seven eight";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 3rem 1rem;
+  padding: 2rem;
+
+  &-one,
+  &-two,
+  &-three,
+  &-four,
+  &-five,
+  &-six,
+  &-seven,
+  &-eight {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    box-shadow: 0 1rem 1rem grey;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid $primary-color;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &-one {
+    grid-area: one;
+  }
+  &-two {
+    grid-area: two;
+  }
+
+  &-three {
+    grid-area: three;
+  }
+  &-four {
+    grid-area: four;
+  }
+  &-five {
+    grid-area: five;
+  }
+  &-six {
+    grid-area: six;
+  }
+  &-seven {
+    grid-area: seven;
+  }
+  &-eight {
+    grid-area: eight;
+  }
+}
+
+.margin-bottom-zero {
+  margin-bottom: 0%;
+}
+
+@media (max-width: 768px) {
+  .top-categories {
+    grid-template-areas:
+      "one two three "
+      "four five six "
+      "seven eight .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024) {
+  .top-categories {
+    grid-template-areas:
+      "one two three "
+      "four five six "
+      "seven eight .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    &-one {
+      height: fit-content;
+    }
+
+    &-two {
+      height: fit-content;
+    }
+    &-three {
+      height: fit-content;
+    }
+    &-four {
+      height: fit-content;
+    }
+    &-five {
+      height: fit-content;
+    }
+    &-six {
+      height: fit-content;
+    }
+    &-seven {
+      height: fit-content;
+    }
+    &-eight {
+      height: fit-content;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .top-categories {
+    display: flex;
+    overflow-x: auto;
+    &-one,
+    &-two,
+    &-three,
+    &-four,
+    &-five,
+    &-six,
+    &-seven,
+    &-eight {
+      margin: 1rem;
+    }
+  }
+}

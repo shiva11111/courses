@@ -1,0 +1,169 @@
+.main-back {
+  padding: 3rem 5rem;
+  background-color: $primary-color;
+  color: white;
+  position: relative;
+  &-container {
+    width: 62%;
+  }
+
+  &-head {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  &-caption {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  &-rating {
+    font-size: 1rem;
+    & span {
+      display: inline-block;
+      background-color: $gold;
+      clip-path: polygon(81% 1%, 100% 49%, 83% 99%, 0 100%, 0 0);
+      padding: 0 9px 0 3px;
+      border-radius: 0.5rem;
+    }
+    padding-bottom: 1rem;
+  }
+
+  &-author {
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+  }
+  &-language {
+    font-size: 0.9rem;
+  }
+}
+
+.fa-star,
+.fa-star-half-alt {
+  color: $gold;
+}
+
+.preview-block {
+  position: absolute;
+  width: 25%;
+  background: $secondary-color;
+  top: 30%;
+  left: 65%;
+  margin-bottom: 1rem;
+  box-shadow: 0 1rem 1rem grey;
+  &-video {
+    & video {
+      width: 100%;
+    }
+  }
+  &-details {
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+}
+
+.block-cost {
+  font-size: 1.7rem;
+  font-weight: bolder;
+
+  & .one {
+    font-weight: 100;
+    text-decoration: line-through;
+    font-size: 1.3rem;
+  }
+  & .two {
+    font-weight: 100;
+    font-size: 1.3rem;
+  }
+}
+
+.btn-container-cart {
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  box-shadow: 0 0.5rem 1rem grey;
+  margin-bottom: 0.5rem;
+  & a:link,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &:active {
+    transform: translateY(-3px);
+  }
+}
+
+.btn-container-buy {
+  padding: 0.5rem 1rem;
+  color: $primary-color;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  box-shadow: 0 0.5rem 1rem grey;
+  margin-bottom: 0.5rem;
+  background-color: $secondary-color;
+  & a:link,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $secondary-color;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &:active {
+    transform: translateY(-3px);
+  }
+}
+
+.block-moneyback {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.block-includes {
+  font-size: 1rem;
+  padding: 0.2rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.block-list {
+  list-style-type: none;
+  text-align: left;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .preview-block {
+    width: 33%;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-back {
+    padding: 0;
+    background-color: inherit;
+  }
+  .main-back-container {
+    display: none;
+  }
+  .preview-block {
+    // display: relative;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    box-shadow: none;
+    border: 2px solid $primary-color;
+  }
+}

@@ -1,0 +1,30 @@
+// $primary-color: #8575cd;
+
+$primary-color: #534888;
+$secondary-color-dark: #c1a2f0;
+$secondary-color: #f0eef7;
+
+$gold: #f4c150;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: $secondary-color;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  // overflow: hidden;
+}
+
+@import "./header";
+@import "./breadcrums";
+@import "./main-back";
+@import "./key-features";
+@import "./content";
+@import "../css/courses";
+@import "./reviews";
+@import "./footer";

@@ -1,0 +1,125 @@
+.student-reviews {
+  display: grid;
+  grid-template-areas: "one two three";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 2rem;
+  &-one,
+  &-two,
+  &-three {
+    box-shadow: 0 1rem 1rem #a5a0a0;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $primary-color;
+    transition: all 0.3s;
+    & .review-head {
+      position: relative;
+      &-img {
+        background-size: cover;
+        background-position: center;
+        border-radius: 100px;
+        height: 6rem;
+        width: 6rem;
+        display: inline-block;
+      }
+      &-name {
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+      }
+    }
+    & .review-details {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &-one {
+    & .review-head {
+      &-img {
+        background-image: url(../images/man.jpg);
+      }
+    }
+
+    grid-area: one;
+  }
+  &-two {
+    & .review-head {
+      &-img {
+        background-image: url(../images/man1.jpg);
+      }
+    }
+
+    grid-area: two;
+  }
+  &-three {
+    & .review-head {
+      &-img {
+        background-image: url(../images/man2.jpg);
+      }
+    }
+
+    grid-area: three;
+  }
+}
+
+@media (max-width: 1025px) {
+  .student-reviews {
+    & .review-head-name {
+      position: absolute;
+      top: 30%;
+      left: 40%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .student-reviews {
+    & .review-head-name {
+      position: absolute;
+      top: 30%;
+      left: 55%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .student-reviews {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 0;
+    &-one,
+    &-two,
+    &-three {
+      margin: 1rem;
+      width: 80%;
+      flex: 0 0 auto;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & .review-head-name {
+      left: 43%;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .student-reviews {
+    & .review-head-name {
+      left: 48%;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .student-reviews {
+    & .review-head-name {
+      left: 60%;
+    }
+  }
+}

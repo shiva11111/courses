@@ -1,0 +1,25 @@
+.courses-btn {
+  text-align: center;
+  margin-top: 3rem;
+  transition: all 2s linear;
+  & a:link,
+  a:visited {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.7rem 2rem;
+    color: white;
+    background-color: $primary-color;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 1rem 1rem #afa7a7;
+    display: inline-block;
+  }
+
+  & .btn:hover {
+    transform: translateY(-5px);
+  }
+
+  & .btn:active {
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,33 @@
+.footer {
+  display: grid;
+  grid-template-areas: "one two three";
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  font-size: 1rem;
+  padding: 2rem;
+  font-weight: bolder;
+  background-color: $primary-color;
+  color: white;
+  &-one,
+  &-two,
+  &-three {
+    list-style: none;
+  }
+
+  &-one {
+    grid-area: one;
+  }
+  &-two {
+    grid-area: two;
+  }
+  &-three {
+    grid-area: three;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    grid-gap: 1rem;
+  }
+}

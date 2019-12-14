@@ -1,0 +1,51 @@
+.key-features {
+  padding: 1rem 2rem;
+  border: 1px solid $primary-color;
+  margin-top: 1rem;
+  width: 62%;
+  background-color: whitesmoke;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  &-head {
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  &-details {
+    display: grid;
+    grid-template-areas:
+      "one two"
+      "three four ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    &-one,
+    &-two,
+    &-three,
+    &-four {
+    }
+
+    &-one {
+      grid-area: one;
+    }
+    &-two {
+      grid-area: two;
+    }
+    &-three {
+      grid-area: three;
+    }
+    &-four {
+      grid-area: four;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .key-features {
+    padding: 1rem;
+    width: 100%;
+  }
+}
